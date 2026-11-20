@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <title> Q2 Skills Test </title>
+
+<style>
+    body {
+        font-family: Georgia, serif;
+        background-color: #5e7192;
+        color: #F5EBDD;
+        text-align: center;
+        margin: 0;
+        padding: 16px;}
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        background-color: #F5EBDD;
+        border-radius: 12px;
+        overflow: hidden;}
+
+    header {
+        background-color: #5e7192;
+        color: #F5EBDD;
+        padding: 28px 15px;
+        border-bottom: 2px solid #1e4394;}
+
+    header h1 {
+        font-family: Georgia, serif;
+        font-size: 38px;
+        letter-spacing: 2px;}
+
+    header p {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        letter-spacing: 3px;
+        color: #F5EBDD;}
+
+    main {
+        background-color: #F5EBDD;
+        color: #5e7192;
+        padding: 28px 40px;
+        border-top: 5px solid #1e4394;}
+
+    .instructions {
+        background-color: #e3e3e3;
+        border: 1px solid #bfc5ce;
+        border-radius: 9px;
+        padding: 20px 28px;
+        margin-bottom: 20px;
+        color: #5e7192;
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: left;}
+
+    label {
+        display: block;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: left;
+        color: #5e7192;}
+
+    input[type="text"] {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 25px;
+        font-size: 20px;
+        margin: 8px 0;
+        background-color: #FFFDF7;
+        color: #172B4D;
+        font-family: Georgia, serif;
+        border: 1px solid #1e4394;
+        border-radius: 8px;
+        outline: none;}
+
+    input[type="text"]:focus {
+        border: 2px solid #5e7192;}
+
+    input[type="text"]::placeholder {
+        color: #8f9094;
+        font-style: italic;}
+
+    input[type="button"] {
+        width: 100%;
+        background-color: #5e7192;
+        color: #F5EBDD;
+        padding: 15px;
+        margin-top: 12px;
+        font-family: Georgia, serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        border: 1px solid #5e7192;
+        border-radius: 8px;
+        cursor: pointer;}
+
+    input[type="button"]:hover {
+        background-color: #fcfcfb;
+        color: #5e7192;}
+
+    hr {
+        border: none;
+        border-top: 2px solid #d0d0d0;
+        margin: 18px 0;}
+
+    h2 {
+        color: #1e4394;
+        font-size: 25px;
+        text-align: left;
+        margin-bottom: 8px; }
+
+    #result {
+        margin-top: 20px;
+        padding: 20px 28px;
+        background-color: #e3e3e3;
+        color: #5e7192;
+        font-family: Georgia, serif;
+        font-size: 20px;
+        line-height: 1.8;
+        border-left: 5px solid #1e4394;
+        border-radius: 8px;
+        text-align: left;
+        overflow-wrap: anywhere;}
+
+    footer {
+        background-color: #1e4394;
+        color: #F5EBDD;
+        padding: 18px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        letter-spacing: 1px;}
+
+    footer span {
+        color: #F5EBDD;
+        font-weight: bold;}
+
+    @media (max-width: 600px) {
+        body {
+            padding: 10px;}
+
+        main {
+            padding: 20px;}
+
+        header h1 {
+            font-size: 27px;}
+
+        header p {
+            font-size: 13px;}
+
+        .instructions {
+            font-size: 16px;
+            padding: 15px;}
+
+        label, #result {
+            font-size: 17px;}
+
+        input[type="text"],
+        input[type="button"] {
+            font-size: 17px;
+        }}
+
+</style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1> Non-Metal Elements ⚙️ </h1>
+            <p> Periodic Table Information Finder </p>
+        </header>
+
+        <main>
+
+            <div class="instructions">
+                <strong> Instructions: </strong><br>
+                Enter the <b>symbol</b> of a non-metal element
+                (Example: H, O, Cl, Ne, Xe).
+            </div>
+
+            <form>
+                <label for="element_symbol">
+                    🔍 Element Symbol
+                </label>
+
+                <input
+                    type="text"
+                    id="element_symbol"
+                    placeholder="Enter element symbol"
+                >
+
+                <input
+                    type="button"
+                    py-click="search_element"
+                    value="Check Details"
+                >
+            </form>
+
+            <hr>
+
+            <h2> 🫧 Result</h2>
+
+            <div id="result">
+                Element information will appear here.
+            </div>
+
+        </main>
+
+        <footer>
+            Periodic Table • Q2 Skills Test
+        </footer>
+
+    </div>
+
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
